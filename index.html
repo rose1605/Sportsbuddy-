@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sports Buddy</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Sports Buddy</h1>
+  </header>
+
+  <main>
+    <section id="auth-section">
+      <h2>Register / Login</h2>
+      <form id="register-form">
+        <input type="email" id="reg-email" placeholder="Email" required>
+        <input type="password" id="reg-password" placeholder="Password" required>
+        <button type="button" onclick="registerUser()">Register</button>
+      </form>
+      <form id="login-form">
+        <input type="email" id="login-email" placeholder="Email" required>
+        <input type="password" id="login-password" placeholder="Password" required>
+        <button type="button" onclick="loginUser()">Login</button>
+      </form>
+    </section>
+
+    <section id="event-section">
+      <h2>Add Sports Event</h2>
+      <form id="event-form">
+        <input type="text" id="event-name" placeholder="Event Name" required>
+        <input type="text" id="event-category" placeholder="Category (e.g. Football, Basketball)" required>
+        <input type="text" id="event-city" placeholder="City" required>
+        <input type="text" id="event-area" placeholder="Area" required>
+        <input type="datetime-local" id="event-time" required>
+        <button type="button" onclick="addSportsEvent()">Add Event</button>
+      </form>
+    </section>
+
+    <section id="search-section">
+      <h2>Search Events</h2>
+      <input type="text" id="search-city" placeholder="Enter City">
+      <input type="text" id="search-category" placeholder="Enter Category">
+      <button type="button" onclick="searchEvents()">Search</button>
+
+      <div id="event-results"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2024 Sports Buddy</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
